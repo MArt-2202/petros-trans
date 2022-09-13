@@ -29,13 +29,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('resize', () => {
 	debounce(function () {
-		blockPosition();
+		blockPosition(function () {
+			if (document.querySelector('header') && !document.querySelector('.header--init')) {
+				document.querySelector('header').classList.add('header--init');
+			}
+		});
 	}, 200);
 });
 
 window.addEventListener('load', () => {
 	debounce(function () {
 		blocksStyles();
-		blockPosition();
+		blockPosition(function () {
+			if (document.querySelector('header') && !document.querySelector('.header--init')) {
+				document.querySelector('header').classList.add('header--init');
+			}
+		});
 	}, 200);
 });
