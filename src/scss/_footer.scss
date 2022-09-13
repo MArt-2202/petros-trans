@@ -33,8 +33,10 @@ footer {
 
 
 @media (min-width: 1231px) {
-	.container {
-		padding-left: 100px;
-		padding-right: 100px;
+	footer {
+		.container {
+			padding-left: 100px;
+			padding-right: 100px;
+		}
 	}
 }
