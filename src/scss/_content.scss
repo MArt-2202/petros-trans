@@ -250,6 +250,10 @@
 		text-align: left;
 	}
 
+	svg {
+		fill: currentColor;
+	}
+
 	&:hover {
 		text-decoration: none;
 	}
