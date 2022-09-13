@@ -149,3 +149,13 @@ label {
 .form {
 	@extend %form;
 }
+
+.contacts-form {
+	label {
+		text-align: right;
+	}
+
+	.form__submit {
+		display: block;
+	}
+}
