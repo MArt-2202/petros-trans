@@ -5,6 +5,15 @@ header {
 		align-items: center;
 		padding-top: 10px;
 		padding-bottom: 10px;
+		height: 155px;
+		overflow: hidden;
+	}
+
+	&.header--init {
+		.container {
+			overflow: visible;
+			height: auto;
+		}
 	}
 }
 
