@@ -1,0 +1,15 @@
+.list-1 {
+	display: grid;
+}
+
+.list-1 {
+	grid-template-columns: 1fr 200px 200px;
+	gap: 50px mp(50, 1200);
+
+	>li {
+		&:first-child {
+			grid-column: 1/span 1;
+			grid-row: 1/span 2;
+		}
+	}
+}
