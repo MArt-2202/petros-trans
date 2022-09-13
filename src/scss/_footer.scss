@@ -1,0 +1,40 @@
+footer {
+	background-color: $c3;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 38px;
+		padding-bottom: 38px;
+	}
+}
+
+.footer__nav,
+.footer__contacts-list {
+	a {
+		color: $c1;
+
+		&:hover {
+			color: $c6;
+		}
+	}
+}
+
+.footer__contacts-list {
+	li+li {
+		margin-top: 7px;
+	}
+
+	a {
+		font-size: fsz(15, 16);
+	}
+}
+
+
+@media (min-width: 1231px) {
+	.container {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+}
