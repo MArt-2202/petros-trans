@@ -3,11 +3,76 @@ header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+
+.header__contacts-list {
+	li+li {
+		margin-top: 8px;
+	}
+
+	a {
+		font-size: fsz(17, 16);
+		font-weight: 700;
+		color: $cb;
+	}
+}
+
+.header__lang {
+
+	li,
+	a {
+		display: inline-block;
+	}
+
+	li:not(:last-child) {
+		margin-right: 8px;
+	}
+
+	a {
+		font-size: fsz(12, 16);
+		line-height: 1;
+		letter-spacing: 0.02em;
+		color: $c3;
+
+		&.active,
+		&:hover {
+			color: $cb;
+		}
+
+		&.active {
+			pointer-events: none;
+		}
+
+		&:hover {
+			text-decoration: none;
+
+		}
 	}
 }
 
 @media (min-width: 1201px) {
+	header {
+		.container {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+	}
+
 	.header__bl-4 {
 		display: none;
+	}
+
+	.header__contacts-list,
+	.header__lang {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.header__contacts-list+.header__lang {
+		margin-left: 115px;
 	}
 }
