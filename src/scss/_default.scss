@@ -95,11 +95,14 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 
 h1,
 h2 {
+	margin-bottom: 47px;
 	font-weight: 700;
+	letter-spacing: 0.02em;
 }
 
 h2 {
 	font-size: fsz(34, 16);
+	color: $c3;
 }
 
 p,
