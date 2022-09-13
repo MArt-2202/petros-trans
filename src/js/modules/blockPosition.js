@@ -1,5 +1,5 @@
 // BLOCK POSITION
-export default function blockPosition() {
+export default function blockPosition(cb) {
 	if (window.matchMedia('(min-width: 361px)').matches) {
 		document.body.classList.remove('max-360');
 
@@ -114,4 +114,6 @@ export default function blockPosition() {
 			}
 		}
 	}
+
+	cb();
 }
