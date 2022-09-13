@@ -85,3 +85,12 @@ header {
 		margin-left: 115px;
 	}
 }
+
+@media (min-width: 1231px) {
+	header {
+		.container {
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	}
+}
