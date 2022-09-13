@@ -76,12 +76,19 @@
 	position: relative;
 	display: inline-block;
 
-	&:before {
+	svg {
 		position: absolute;
 		top: 50%;
 		left: 0;
 		transform: translateY(-50%);
 		@include trs-all;
+	}
+
+	&.icon-shipping {
+		svg {
+			width: 27px;
+			height: 29px;
+		}
 	}
 }
 
@@ -115,5 +122,15 @@
 			text-decoration: none;
 			color: $c6;
 		}
+	}
+}
+
+.style-1 {
+	margin-bottom: 116px;
+}
+
+@media (max-width: 1024px) {
+	style-1 {
+		margin-bottom: 76px;
 	}
 }
