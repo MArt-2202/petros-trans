@@ -117,6 +117,195 @@
 
 /*
 =================================
+	ABOUT
+=================================
+*/
+.about__aside {
+	width: min(450px, 100%);
+	margin-top: 50px;
+	padding: 45px 30px 45px 50px;
+	background-color: $c7;
+}
+
+.about__main {
+	font-size: fsz(15, 16);
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	li {
+		position: relative;
+		padding-left: 25px;
+		line-height: 1.6;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 6px;
+			width: 5px;
+			height: 5px;
+			background-color: $cb;
+		}
+	}
+}
+
+.about__info {
+	display: flex;
+	gap: 30px;
+
+	>div {
+		&:first-child {
+			flex: none;
+			width: 150px;
+		}
+
+		&:last-child {
+			flex-grow: 1;
+		}
+
+		>strong,
+		>span {
+			display: block;
+		}
+
+		>strong,
+		>span,
+		ul {
+			padding-left: 20px;
+		}
+
+		>strong {
+			font-size: fsz(17, 16);
+			font-weight: 700;
+			line-height: 1;
+		}
+
+		>strong {
+			&+span {
+				margin-top: 9px;
+				margin-bottom: 20px;
+			}
+		}
+
+		>span {
+			font-size: fsz(13, 16);
+			font-weight: 300;
+			line-height: 1.2;
+		}
+	}
+
+	ul {
+		margin-bottom: 25px;
+	}
+
+	li {
+		&+li {
+			margin-top: 8px;
+		}
+	}
+
+	a[href^="tel"] {
+		display: inline-block;
+		font-size: fsz(15, 16);
+		font-weight: 700;
+		line-height: 1;
+		color: $cb;
+
+		&:hover {
+			text-decoration: none;
+			color: $c6;
+		}
+	}
+
+	.list-img {
+		height: calc(100% + 100px);
+		margin-left: -100px;
+		margin-top: -100px;
+	}
+
+	&+p {
+		font-size: fsz(15, 16);
+		margin-bottom: 0;
+	}
+}
+
+.about__viber,
+.about__whatsapp {
+	display: block;
+	height: 38px;
+	line-height: 36px;
+	border-radius: 2px;
+	text-align: center;
+
+	span {
+		padding-left: 35px;
+		font-size: fsz(13, 16);
+		font-weight: 300;
+		line-height: 1;
+		color: $c1;
+		text-align: left;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.about__viber {
+	background-color: $c4;
+
+	&:hover {
+		background-color: $c9;
+	}
+}
+
+.about__whatsapp {
+	background-color: $c5;
+
+	&:hover {
+		background-color: $c10;
+	}
+}
+
+.about__viber+.about__whatsapp {
+	margin-top: 12px;
+}
+
+@media (min-width: 1025px) {
+	.about__content {
+		display: flex;
+	}
+
+	.about__aside {
+		flex: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.about__main {
+		padding-left: 50px;
+		flex-grow: 1;
+	}
+}
+
+@media (min-width: 1231px) {
+	.about {
+		padding-left: mp(50, 1200);
+	}
+
+	.about__main {
+		padding-left: 100px;
+	}
+}
+
+
+/*
+=================================
 	SERVICES
 =================================
 */
