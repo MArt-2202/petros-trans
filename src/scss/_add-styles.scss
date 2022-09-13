@@ -116,7 +116,6 @@
 	a {
 		display: inline-block;
 		line-height: 1;
-		letter-spacing: 0.02em;
 
 		&:hover {
 			text-decoration: none;
@@ -130,7 +129,21 @@
 }
 
 @media (max-width: 1024px) {
-	style-1 {
+	.style-1 {
 		margin-bottom: 76px;
+	}
+}
+
+.map-wrapper {
+	position: relative;
+	overflow: hidden;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		min-width: 100%;
+		border: none;
 	}
 }
