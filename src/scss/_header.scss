@@ -17,6 +17,9 @@ header {
 	}
 }
 
+.logo-company {
+	display: inline-block;
+}
 
 .header__contacts-list {
 	li+li {
@@ -90,6 +93,191 @@ header {
 		.container {
 			padding-left: 50px;
 			padding-right: 50px;
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 998;
+		width: 100%;
+		background-color: $c1;
+
+		.container {
+			height: 60px;
+		}
+	}
+
+	.header__bl-2,
+	.header__bl-3,
+	.header__lang {
+		display: none;
+	}
+
+	.logo-company {
+		width: 69px;
+	}
+
+	.header__contacts-list {
+		li+li {
+			margin-top: 5px;
+		}
+
+		a {
+			font-size: fsz(12, 16);
+		}
+	}
+
+	.toggle-wrapper,
+	.toggle-btn {
+		position: relative;
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+	}
+
+	.toggle-wrapper {
+		vertical-align: middle;
+
+		>div {
+			position: fixed;
+			top: 60px;
+			right: 0;
+			bottom: 0;
+			z-index: 998;
+			width: calc(min(300px, 100%));
+			padding: 17px 15px 35px 15px;
+			text-align: center;
+			background: $c1 url(../img/bg-2.svg) no-repeat 100% 100%;
+			background-size: 85% auto;
+			overflow-y: auto;
+			opacity: 0;
+			visibility: hidden;
+			transform: scaleY(0);
+			transform-origin: top;
+			@include trs-all;
+
+			>div {
+				height: 100%;
+				overflow-y: auto;
+			}
+
+			&.content-visible {
+				opacity: 1;
+				visibility: visible;
+				transform: scaleY(1);
+			}
+		}
+
+		.header__contacts-list,
+		.header__nav,
+		.header__lang {
+			display: block;
+		}
+
+		.header__nav {
+			li {
+				display: block;
+
+				&:not(:last-child) {
+					margin-right: 0;
+				}
+			}
+
+			a {
+				display: block;
+				padding: 8px 10px;
+				font-size: fsz(20, 14);
+				line-height: 1;
+			}
+		}
+
+		.header__contacts-list+.header__lang {
+			margin-top: 27px;
+		}
+
+		.header__lang {
+			a {
+				font-size: 1rem;
+			}
+
+			&+.header__nav {
+				margin-top: 18px;
+			}
+		}
+	}
+
+	.toggle-btn {
+		position: relative;
+		top: 1px;
+		padding: 0;
+		overflow: hidden;
+		cursor: pointer;
+
+		span {
+			position: absolute;
+			left: 0;
+			height: 2px;
+			width: 100%;
+			background-color: $c3;
+			@include trs;
+
+			&:first-child {
+				top: 0;
+				left: auto;
+				right: 0;
+			}
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				top: 11px;
+			}
+
+			&:nth-child(4) {
+				bottom: 0;
+			}
+		}
+	}
+
+	.toggle-btn-style {
+		span {
+
+			&:first-child,
+			&:nth-child(4) {
+				background-color: transparent;
+			}
+
+			&:nth-child(2),
+			&:nth-child(3) {
+				background-color: $c6;
+			}
+
+			&:first-child {
+				transform: translateX(40px);
+			}
+
+			&:nth-child(2) {
+				transform: rotate(45deg);
+			}
+
+			&:nth-child(3) {
+				transform: rotate(-45deg);
+			}
+
+			&:nth-child(4) {
+				transform: translateX(-40px);
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.header__contacts-list {
+		a {
+			font-size: fsz(12, 14);
 		}
 	}
 }
