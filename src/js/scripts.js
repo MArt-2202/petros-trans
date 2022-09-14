@@ -4,7 +4,7 @@ import debounce from './modules/debounce';
 import blocksStyles from './modules/blocksStyles';
 import blockPosition from './modules/blockPosition';
 import tableWrapper from './modules/tableWrapper';
-// import toggleContent from './modules/toggleContent';
+import toggleContent from './modules/toggleContent';
 import masketInput from './modules/masketInput';
 
 if ('ontouchstart' in document.documentElement) {
@@ -23,7 +23,7 @@ if (isMobile()) {
 
 document.addEventListener('DOMContentLoaded', () => {
 	tableWrapper();
-	// toggleContent();
+	toggleContent();
 	masketInput();
 }); // END READY
 
