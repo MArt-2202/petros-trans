@@ -1,5 +1,12 @@
 // BLOCK POSITION
 export default function blockPosition(cb) {
+	const bl1 = document.querySelector('.header__nav'),
+		bl2 = document.querySelector('.header__lang'),
+		bl3 = document.querySelector('.toggle__content > div'),
+		bl4 = document.querySelector('.header__bl-2'),
+		bl5 = document.querySelector('.header__bl-3'),
+		bl6 = document.querySelector('.header__contacts-list');
+
 	if (window.matchMedia('(min-width: 361px)').matches) {
 		document.body.classList.remove('max-360');
 
@@ -18,9 +25,6 @@ export default function blockPosition(cb) {
 			document.body.classList.add('min-577');
 
 			if (document.querySelector('.min-577')) {
-				// if (bl19 && bl21) {
-				// 	bl19.prepend(bl21);
-				// }
 			}
 		}
 	}
@@ -54,6 +58,17 @@ export default function blockPosition(cb) {
 			document.body.classList.add('min-1201');
 
 			if (document.querySelector('.min-1201')) {
+				if (bl5 && bl6) {
+					bl5.append(bl6);
+				}
+
+				if (bl1 && bl4) {
+					bl4.append(bl1);
+				}
+
+				if (bl2 && bl5) {
+					bl5.append(bl2);
+				}
 			}
 		}
 	}
@@ -65,6 +80,17 @@ export default function blockPosition(cb) {
 			document.body.classList.add('max-1200');
 
 			if (document.querySelector('.max-1200')) {
+				if (bl3 && bl6) {
+					bl3.prepend(bl6);
+				}
+
+				if (bl2 && bl6) {
+					bl6.after(bl2);
+				}
+
+				if (bl1 && bl2) {
+					bl2.after(bl1);
+				}
 			}
 		}
 	}
