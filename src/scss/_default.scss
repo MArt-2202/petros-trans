@@ -38,6 +38,12 @@ main {
 	flex: 1 0 auto;
 }
 
+@media (max-width: 1200px) {
+	main {
+		padding-top: 105px;
+	}
+}
+
 picture::selection,
 img::selection,
 table th::selection,
@@ -104,7 +110,6 @@ h3 {
 h1,
 h2 {
 	margin-bottom: 43px;
-
 }
 
 h1 {
@@ -119,6 +124,38 @@ h2 {
 h3 {
 	margin-bottom: 20px;
 	font-size: fsz(17, 16);
+}
+
+@media (max-width: 1024px) {
+
+	h1,
+	h2 {
+		margin-bottom: 24px;
+	}
+
+	h1 {
+		font-size: fsz(32, 16);
+	}
+
+	h2 {
+		font-size: fsz(29, 16);
+	}
+}
+
+@media (max-width: 768px) {
+	h1 {
+		font-size: fsz(30, 16);
+	}
+
+	h2 {
+		font-size: fsz(27, 16);
+	}
+}
+
+@media (max-width: 576px) {
+	h3 {
+		font-size: fsz(16, 14);
+	}
 }
 
 p,
