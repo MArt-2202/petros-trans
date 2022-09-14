@@ -40,3 +40,18 @@ footer {
 		}
 	}
 }
+
+@media (max-width: 768px) {
+	footer {
+		.container {
+			flex-direction: column;
+			gap: 25px;
+
+			div {
+				&:first-child {
+					order: 1;
+				}
+			}
+		}
+	}
+}
