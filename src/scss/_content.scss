@@ -221,43 +221,22 @@
 
 /*
 =================================
-	ABOUT
+	FEEDBACK
 =================================
 */
-.about__aside {
-	width: min(450px, 100%);
-	margin-top: 50px;
+.feedback-wrapper {
+	padding-left: 50px;
+}
+
+.feedback {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	padding: 45px 30px 45px 50px;
 	background-color: $c7;
 }
 
-.about__main {
-	font-size: fsz(15, 16);
-
-	p {
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-
-	li {
-		position: relative;
-		padding-left: 25px;
-		line-height: 1.6;
-
-		&:before {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 6px;
-			width: 5px;
-			height: 5px;
-			background-color: $cb;
-		}
-	}
-}
-
-.about__info {
+.feedback__info {
 	display: flex;
 	gap: 30px;
 
@@ -333,12 +312,13 @@
 
 	&+p {
 		font-size: fsz(15, 16);
+		margin-top: 35px;
 		margin-bottom: 0;
 	}
 }
 
-.about__viber,
-.about__whatsapp {
+.feedback__viber,
+.feedback__whatsapp {
 	display: block;
 	height: 38px;
 	line-height: 36px;
@@ -363,7 +343,7 @@
 	}
 }
 
-.about__viber {
+.feedback__viber {
 	background-color: $c4;
 
 	&:hover {
@@ -371,7 +351,7 @@
 	}
 }
 
-.about__whatsapp {
+.feedback__whatsapp {
 	background-color: $c5;
 
 	&:hover {
@@ -379,20 +359,99 @@
 	}
 }
 
-.about__viber+.about__whatsapp {
+.feedback__viber+.feedback__whatsapp {
 	margin-top: 12px;
 }
 
+@media (max-width: 1024px) {
+	.feedback-wrapper {
+		padding-left: 20px;
+	}
+}
+
+@media (max-width: 640px) {
+	.feedback {
+		padding: 40px 20px 35px 20px;
+	}
+
+	.feedback__info {
+		gap: 20px;
+
+		.list-img {
+			height: calc(100% + 55px);
+			margin-left: -40px;
+			margin-top: -55px;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.feedback__info {
+		>div {
+			&:first-child {
+				width: 120px;
+			}
+		}
+	}
+}
+
+@media (max-width: 400px) {
+	.feedback-wrapper {
+		padding-left: 0;
+	}
+
+	.feedback__info {
+		flex-direction: column;
+		gap: 30px;
+
+		>div {
+			&:first-child {
+				width: calc(min(250px, 100%));
+			}
+		}
+
+		.list-img {
+			height: auto;
+			padding-top: 125%;
+			margin: 0;
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.feedback {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+/*
+=================================
+	ABOUT
+=================================
+*/
+.about__aside {
+	width: min(500px, 100%);
+	margin-top: 50px;
+}
+
+.about__main {
+	@extend %article;
+}
+
 @media (min-width: 1025px) {
+	.about {
+		h2 {
+			padding-left: 50px;
+		}
+	}
+
 	.about__content {
 		display: flex;
 	}
 
 	.about__aside {
 		flex: none;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
 	}
 
 	.about__main {
@@ -411,6 +470,12 @@
 	}
 }
 
+@media (max-width: 1024px) {
+	.about__aside {
+		margin: 0 auto 55px auto;
+		padding-top: 55px;
+	}
+}
 
 /*
 =================================
