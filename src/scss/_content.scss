@@ -708,10 +708,6 @@
 	CONTACTS
 =================================
 */
-.contacts {
-	padding-top: 88px;
-}
-
 .contacts__aside {
 	width: min(450px, 100%);
 	padding: 42px 50px 50px 50px;
@@ -812,10 +808,6 @@
 }
 
 @media (max-width: 1024px) {
-	.contacts {
-		padding-top: 33px;
-	}
-
 	.contacts__aside {
 		margin: 0 auto 80px auto;
 		padding: 32px 40px 40px 40px;
