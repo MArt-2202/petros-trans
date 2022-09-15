@@ -696,6 +696,10 @@
 	CONTACTS
 =================================
 */
+.contacts {
+	padding-top: 88px;
+}
+
 .contacts__aside {
 	width: min(450px, 100%);
 	padding: 42px 50px 50px 50px;
@@ -753,7 +757,7 @@
 			content: '';
 			position: absolute;
 			right: -30px;
-			top: -5px;
+			top: 75px;
 			width: 650px;
 			height: 300px;
 			background: url(../img/bg-2.svg) no-repeat;
@@ -796,6 +800,10 @@
 }
 
 @media (max-width: 1024px) {
+	.contacts {
+		padding-top: 33px;
+	}
+
 	.contacts__aside {
 		margin: 0 auto 80px auto;
 		padding: 32px 40px 40px 40px;
