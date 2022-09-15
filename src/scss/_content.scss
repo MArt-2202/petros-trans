@@ -1,5 +1,35 @@
 /*
 =================================
+	CONTENT
+=================================
+*/
+.content__aside {
+	width: calc(min(500px, 100%));
+}
+
+@media (min-width: 1025px) {
+	.content {
+		display: flex;
+		gap: 65px;
+	}
+
+	.content__main {
+		flex-grow: 1;
+	}
+
+	.content__aside {
+		flex: none;
+	}
+}
+
+@media (max-width: 1024px) {
+	.content__main+.content__aside {
+		margin-top: 55px;
+	}
+}
+
+/*
+=================================
 	TOP SECTION
 =================================
 */
