@@ -6,6 +6,7 @@ import blockPosition from './modules/blockPosition';
 import tableWrapper from './modules/tableWrapper';
 import toggleContent from './modules/toggleContent';
 import masketInput from './modules/masketInput';
+import scrollToAnchor from './modules/scrollToAnchor';
 
 if ('ontouchstart' in document.documentElement) {
 	document.body.classList.add('touchdevice');
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	tableWrapper();
 	toggleContent();
 	masketInput();
+	scrollToAnchor();
 }); // END READY
 
 window.addEventListener('resize', () => {
