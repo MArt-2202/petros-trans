@@ -1,0 +1,37 @@
+%article {
+	font-size: fsz(15, 16);
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	ul {
+		li {
+			position: relative;
+			padding-left: 25px;
+			line-height: 1.6;
+
+			&:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 11px;
+				width: 5px;
+				height: 5px;
+				background-color: $cb;
+			}
+		}
+	}
+
+	@media (max-width: 576px) {
+		font-size: fsz(15, 14);
+
+		ul {
+			li {
+				padding-left: 20px;
+			}
+		}
+	}
+}
