@@ -6,6 +6,15 @@ export default function scrollToAnchor() {
 			if (link) {
 				e.preventDefault();
 				scrollToTarget(link.hash);
+
+				if (document.querySelector('.content-visible')) {
+					document.querySelector('.toggle-btn').classList.remove('toggle-btn-style');
+					document.querySelector('.toggle-wrapper > div').classList.remove('content-visible');
+					document.querySelector('.overlay').classList.remove('overlay-visible');
+
+					document.body.style.overflowY = '';
+					document.body.style.paddingRight = '';
+				}
 			}
 		});
 
@@ -21,6 +30,8 @@ export default function scrollToAnchor() {
 
 				if (document.querySelector('.mobile-user-agent')) {
 					pos = pos - document.querySelector('header')?.offsetHeight;
+				} else {
+					pos = pos - 112;
 				}
 
 				window.scrollTo({
