@@ -107,8 +107,17 @@ header {
 		background-color: $c1;
 
 		.container {
+			position: relative;
 			height: 60px;
+			justify-content: flex-end;
 		}
+	}
+
+	.header__bl-1 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 
 	.header__bl-2,
