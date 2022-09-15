@@ -159,3 +159,27 @@ label {
 		display: block;
 	}
 }
+
+@media (max-width: 400px) {
+	.contacts-form {
+		div {
+
+			&:nth-child(even),
+			&:nth-child(7),
+			&:nth-child(9) {
+				margin-bottom: 15px;
+			}
+
+			&:nth-child(8) {
+				margin-bottom: 0;
+			}
+		}
+
+		label {
+			margin-bottom: 7px;
+			padding-left: 15px;
+			padding-right: 15px;
+			text-align: left;
+		}
+	}
+}
