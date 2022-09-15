@@ -134,27 +134,31 @@ h3 {
 	}
 
 	h1 {
-		font-size: fsz(32, 16);
+		font-size: fsz(34, 16);
 	}
 
 	h2 {
-		font-size: fsz(29, 16);
-	}
-}
-
-@media (max-width: 768px) {
-	h1 {
-		font-size: fsz(30, 16);
-	}
-
-	h2 {
-		font-size: fsz(27, 16);
+		font-size: fsz(31, 16);
 	}
 }
 
 @media (max-width: 576px) {
+	h1 {
+		font-size: fsz(34, 14);
+	}
+
+	h2 {
+		font-size: fsz(31, 14);
+	}
+
 	h3 {
 		font-size: fsz(16, 14);
+	}
+}
+
+@media (max-width: 415px) {
+	h2 {
+		font-size: fsz(29, 14);
 	}
 }
 
