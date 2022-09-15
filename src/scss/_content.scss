@@ -477,6 +477,18 @@
 	}
 }
 
+@media (max-width: 640px) {
+	.about__aside {
+		padding-top: 15px;
+	}
+}
+
+@media (max-width: 400px) {
+	.about__aside {
+		padding-top: 0;
+	}
+}
+
 /*
 =================================
 	SERVICES
