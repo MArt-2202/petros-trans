@@ -1,0 +1,269 @@
+.top-section li,
+.top-section h1,
+.top-section__more-info-btn,
+h1,
+h2,
+h3,
+.about__main p,
+.about__main li,
+.services-list li,
+.contacts__aside,
+.feedback-wrapper,
+.contacts__list li,
+.top-section__img,
+.article li,
+.article p {
+	opacity: 0;
+}
+
+.desktop-user-agent {
+
+	.top-section li,
+	.top-section h1,
+	.top-section__more-info-btn,
+	h1,
+	h2,
+	h3,
+	.about__main p,
+	.about__main li,
+	.services-list li,
+	.contacts__list li,
+	.contacts__aside,
+	.feedback-wrapper,
+	.top-section__img,
+	.article li,
+	.article p {
+		animation-duration: 0.55s;
+		animation-fill-mode: both;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+
+	.top-section li,
+	.header__nav li,
+	.about__main li,
+	.services-list li,
+	.contacts__list li,
+	.about__main p,
+	.article li,
+	.article p {
+		&:nth-child(2) {
+			animation-delay: 0.15s;
+		}
+
+		&:nth-child(3) {
+			animation-delay: 0.3s;
+		}
+
+		&:nth-child(4) {
+			animation-delay: 0.45s;
+		}
+
+		&:nth-child(5) {
+			animation-delay: 0.6s;
+		}
+
+		&:nth-child(6) {
+			animation-delay: 0.75s;
+		}
+
+		&:nth-child(7) {
+			animation-delay: 0.9s;
+		}
+
+		&:nth-child(8) {
+			animation-delay: 1.05s;
+		}
+
+		&:nth-child(9) {
+			animation-delay: 1.2s;
+		}
+
+		&:nth-child(10) {
+			animation-delay: 1.35s;
+		}
+
+		&:nth-child(11) {
+			animation-delay: 1.5s;
+		}
+
+		&:nth-child(12) {
+			animation-delay: 1.65s;
+		}
+
+		&:nth-child(13) {
+			animation-delay: 1.8s;
+		}
+
+		&:nth-child(14) {
+			animation-delay: 1.95s;
+		}
+
+		&:nth-child(15) {
+			animation-delay: 2.1s;
+		}
+	}
+}
+
+.mobile-user-agent {
+
+	.top-section li,
+	.top-section h1,
+	.top-section__more-info-btn,
+	h1,
+	h2,
+	h3,
+	.about__main p,
+	.about__main li,
+	.services-list li,
+	.contacts__list li,
+	.contacts__aside,
+	.feedback-wrapper,
+	.top-section__img,
+	.article li,
+	.article p {
+		opacity: 1;
+	}
+}
+
+.bounce {
+	animation-name: bounce;
+}
+
+@keyframes bounce {
+
+	0%,
+	20%,
+	53%,
+	to {
+		-webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+		animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0)
+	}
+
+	40%,
+	43% {
+		-webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+		animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+		-webkit-transform: translate3d(0, -30px, 0) scaleY(1.1);
+		transform: translate3d(0, -30px, 0) scaleY(1.1)
+	}
+
+	70% {
+		-webkit-animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+		animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+		-webkit-transform: translate3d(0, -15px, 0) scaleY(1.05);
+		transform: translate3d(0, -15px, 0) scaleY(1.05)
+	}
+
+	80% {
+		-webkit-transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+		transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+		-webkit-transform: translateZ(0) scaleY(.95);
+		transform: translateZ(0) scaleY(.95)
+	}
+
+	90% {
+		-webkit-transform: translate3d(0, -4px, 0) scaleY(1.02);
+		transform: translate3d(0, -4px, 0) scaleY(1.02)
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.slideInLeft {
+	animation-name: slideInLeft;
+}
+
+@keyframes slideInLeft {
+	0% {
+		transform: translate3d(-100%, 0, 0);
+	}
+
+	to {
+		transform: translateZ(0);
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+.flipInX {
+	backface-visibility: visible;
+	animation-name: flipInX;
+}
+
+@keyframes flipInX {
+	0% {
+		transform: perspective(400px) rotateX(90deg);
+		animation-timing-function: ease-in;
+		opacity: 0
+	}
+
+	40% {
+		transform: perspective(400px) rotateX(-20deg);
+		animation-timing-function: ease-in
+	}
+
+	60% {
+		transform: perspective(400px) rotateX(10deg);
+		opacity: 1
+	}
+
+	80% {
+		transform: perspective(400px) rotateX(-5deg)
+	}
+
+	to {
+		transform: perspective(400px);
+		opacity: 1;
+	}
+}
+
+.slideInUp {
+	animation-name: slideInUp;
+}
+
+@keyframes slideInUp {
+	0% {
+		transform: translate3d(0, 100%, 0);
+		visibility: visible
+	}
+
+	to {
+		transform: translateZ(0);
+		opacity: 1;
+	}
+}
+
+.slideInLeft {
+	animation-name: slideInLeft;
+}
+
+@keyframes slideInLeft {
+	0% {
+		transform: translate3d(-100%, 0, 0);
+		visibility: visible;
+	}
+
+	to {
+		transform: translateZ(0);
+		opacity: 1;
+	}
+}
