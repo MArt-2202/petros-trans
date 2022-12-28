@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uk">
+//=include('templates/head.html')
+
+<body itemscope itemtype="http://schema.org/WebPage">
+	//=include('templates/schemaOrgInfo.html')
+	//=include('templates/header.html')
+	<main>
+		<!-- CONTAINER -->
+		<div class="container">
+			<div class="style-1 content">
+				<div class="content__main">
+					<ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
+						<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+							<a itemprop="item" href="/">
+								<span itemprop="name">Головна</span></a>
+							<meta itemprop="position" content="1">
+						</li>
+						<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+							<a itemprop="item" href="/category/novini-rivnoho">
+								<span itemprop="name">Вантажні перевезення в Європу</span>
+							</a>
+							<meta itemprop="position" content="2">
+						</li>
+					</ul>
+					//=include('html_modules/_article.html')
+				</div>
+				<aside class="content__aside">
+					<div class="article__img">
+						<picture>
+							<source srcset="img/webp/bg-1.webp" type="image/webp">
+							<img src="img/bg-1.jpg" alt="" width="885" height="550">
+						</picture>
+					</div>
+					//=include('html_modules/_feedback.html')
+				</aside>
+			</div>
+			//=include('html_modules/_services.html')
+			//=include('html_modules/_contacts.html')
+		</div><!-- END CONTAINER -->
+	</main>
+	//=include('templates/footer.html')
+	//=include('templates/afterFooterContent.html')
+</body>
+
+</html>
