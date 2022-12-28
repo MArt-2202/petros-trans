@@ -289,10 +289,6 @@ video {
 .breadcrumbs {
 	margin-bottom: 20px;
 
-	&+h1 {
-		margin-top: -13px;
-	}
-
 	li,
 	a {
 		position: relative;
@@ -302,15 +298,15 @@ video {
 
 	li {
 		margin-right: 5px;
-		padding-right: 16px;
 		margin-bottom: 10px;
+		padding-right: 16px;
 
 		&:after {
 			content: '—';
 			position: absolute;
 			right: 0;
-			top: 7px;
-			font-size: 8px;
+			top: 6px;
+			font-size: 10px;
 			color: currentColor;
 		}
 
@@ -318,64 +314,41 @@ video {
 			margin-right: 0;
 			padding-right: 0;
 
-			a {
-				pointer-events: none;
-				text-decoration: none;
-				font-weight: 300;
-				opacity: 0.5;
-			}
-
 			&:after {
 				display: none;
 			}
-		}
 
-		a,
-		a+span {
-
-			display: inline-block;
-			color: $cb;
-		}
-
-		a {
-			position: relative;
-
-			&+span {
+			a {
 				pointer-events: none;
 				text-decoration: none;
-				font-weight: 300;
 				opacity: 0.5;
 			}
 		}
 	}
 
-	a,
-	a+span {
+	a {
+		display: inline-block;
 		font-size: fsz(10, 16);
-		font-weight: 400;
 		line-height: 1.25;
 		color: $cb;
-	}
-
-	a {
-		position: relative;
-		display: inline-block;
-		margin-right: 5px;
-		padding-right: 16px;
-		margin-bottom: 10px;
-
-		&:after {
-			content: '—';
-			position: absolute;
-			right: 0;
-			top: 2px;
-			font-size: 8px;
-			color: currentColor;
-		}
 
 		&:hover {
-			color: $c5;
+			color: $c3;
 			text-decoration: none;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.breadcrumbs {
+		li {
+			&:after {
+				top: 5px;
+			}
+		}
+
+		a {
+			font-size: fsz(10, 14);
 		}
 	}
 }
