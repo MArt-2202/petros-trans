@@ -5,7 +5,10 @@ export default function blockPosition(cb) {
 		bl3 = document.querySelector('.toggle__content > div'),
 		bl4 = document.querySelector('.header__bl-2'),
 		bl5 = document.querySelector('.header__bl-3'),
-		bl6 = document.querySelector('.header__contacts-list');
+		bl6 = document.querySelector('.header__contacts-list'),
+		bl7 = document.querySelector('.content__aside'),
+		bl8 = document.querySelector('.content__main h1'),
+		bl9 = document.querySelector('.article__img');
 
 	if (window.matchMedia('(min-width: 361px)').matches) {
 		document.body.classList.remove('max-360');
@@ -13,8 +16,7 @@ export default function blockPosition(cb) {
 		if (!document.body.classList.contains('min-361')) {
 			document.body.classList.add('min-361');
 
-			if (document.querySelector('.min-361')) {
-			}
+			if (document.querySelector('.min-361')) {}
 		}
 	}
 
@@ -24,8 +26,7 @@ export default function blockPosition(cb) {
 		if (!document.body.classList.contains('min-577')) {
 			document.body.classList.add('min-577');
 
-			if (document.querySelector('.min-577')) {
-			}
+			if (document.querySelector('.min-577')) {}
 		}
 	}
 
@@ -35,8 +36,7 @@ export default function blockPosition(cb) {
 		if (!document.body.classList.contains('min-769')) {
 			document.body.classList.add('min-769');
 
-			if (document.querySelector('.min-769')) {
-			}
+			if (document.querySelector('.min-769')) {}
 		}
 	}
 
@@ -47,6 +47,9 @@ export default function blockPosition(cb) {
 			document.body.classList.add('min-1025');
 
 			if (document.querySelector('.min-1025')) {
+				if (bl7 && bl9) {
+					bl7.prepend(bl9);
+				}
 			}
 		}
 	}
@@ -103,6 +106,9 @@ export default function blockPosition(cb) {
 
 			if (document.querySelector('.max-1024')) {
 				if (document.querySelector('.max-1024')) {
+					if (bl8 && bl9) {
+						bl8.after(bl9);
+					}
 				}
 			}
 		}
@@ -114,8 +120,7 @@ export default function blockPosition(cb) {
 		if (!document.body.classList.contains('max-768')) {
 			document.body.classList.add('max-768');
 
-			if (document.querySelector('.max-768')) {
-			}
+			if (document.querySelector('.max-768')) {}
 		}
 	}
 
@@ -125,8 +130,7 @@ export default function blockPosition(cb) {
 		if (!document.body.classList.contains('max-576')) {
 			document.body.classList.add('max-576');
 
-			if (document.querySelector('.max-576')) {
-			}
+			if (document.querySelector('.max-576')) {}
 		}
 	}
 
@@ -136,8 +140,7 @@ export default function blockPosition(cb) {
 		if (!document.body.classList.contains('max-360')) {
 			document.body.classList.add('max-360');
 
-			if (document.querySelector('.max-360')) {
-			}
+			if (document.querySelector('.max-360')) {}
 		}
 	}
 
